@@ -15,6 +15,7 @@ class RadioTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     public void testSetCurrentStation() {
         Radio rad = new Radio();
@@ -25,6 +26,7 @@ class RadioTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     public void testOverMaxSetCurrentStation() {
         Radio rad = new Radio();
@@ -35,6 +37,7 @@ class RadioTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     public void testAfterMaximalStation() {
         Radio rad = new Radio();
@@ -100,6 +103,7 @@ class RadioTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     public void testDownOverLimitVolume() {
         Radio rad = new Radio();
