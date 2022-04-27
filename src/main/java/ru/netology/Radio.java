@@ -1,56 +1,81 @@
 package ru.netology;
 
 public class Radio {
-    public int currentStation;
+    private int numberOfStation;
 
-    public int currentVolume;
+    private int currentStation;
+
+    private int currentVolume;
+
+
+    public Radio (int numberOfStation) {
+        this.numberOfStation = numberOfStation;
+    }
+
+    public Radio () {
+        numberOfStation = 10;
+    }
 
     public int getCurrentStation() {
+
         return currentStation;
     }
-    public int setCurrentStation(int currentStation) {
+
+    public int getCurrentVolume() {
+        return currentVolume;
+    }
+
+    public void setCurrentVolume(int newCurrentVolume) {
+
+        currentVolume = newCurrentVolume;
+    }
+
+    public void setCurrentStation(int currentStation) {
 
         if (currentStation < 0) {
-            return currentStation;
+            return;
         }
         if (currentStation > 9) {
-            return currentStation;
+            return;
         }
         this.currentStation = currentStation;
-        return currentStation;
     }
 
-    public int getNextCurrentStation(int currentStation) {
+    public void nextCurrentStation() {
 
-        if ( currentStation > 8) {
-            return 0;
+        if (currentStation > 8) {
+            currentStation = 0;
+            return;
         }
-        return(currentStation + 1);
+        this.currentStation = currentStation + 1;
     }
 
-    public int getPrevCurrentStation(int currentStation) {
+    public void prevCurrentStation() {
 
-        if ( currentStation < 1) {
-            return 0;
+        if (currentStation < 1) {
+            currentStation = 9;
+            return;
         }
-        return(currentStation - 1);
+        this.currentStation = currentStation - 1;
     }
 
+    public void upCurrentVolume() {
 
-    public int getUpCurrentVolume(int currentVolume) {
-
-        if (currentVolume < 10) {
-            return(currentVolume + 1);
+        if (currentVolume < 100) {
+            currentVolume = currentVolume + 1;
+            return;
         }
 
-        return currentVolume;
+        this.currentVolume = 100;
     }
 
-    public int getDownCurrentVolume(int currentVolume) {
+    public void downCurrentVolume() {
 
         if (currentVolume > 0) {
-            return(currentVolume - 1);
+            currentVolume = currentVolume - 1;
+            return;
         }
-        return currentVolume;
+        this.currentVolume = 0;
     }
+
 }
