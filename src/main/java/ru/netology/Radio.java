@@ -48,7 +48,6 @@ public class Radio {
         this.currentStation = currentStation - 1;
     }
 
-
     public void upCurrentVolume() {
 
         if (currentVolume < 10) {
