@@ -35,7 +35,7 @@ public class Radio {
         if (currentStation < 0) {
             return;
         }
-        if (currentStation > 9) {
+        if (currentStation >= numberOfStation) {
             return;
         }
         this.currentStation = currentStation;
@@ -43,7 +43,8 @@ public class Radio {
 
     public void nextCurrentStation() {
 
-        if (currentStation > 8) {
+        int j = numberOfStation - 1;
+        if (currentStation >= j) {
             currentStation = 0;
             return;
         }
@@ -53,7 +54,7 @@ public class Radio {
     public void prevCurrentStation() {
 
         if (currentStation < 1) {
-            currentStation = 9;
+            currentStation = numberOfStation - 1;
             return;
         }
         this.currentStation = currentStation - 1;
