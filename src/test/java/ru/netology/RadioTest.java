@@ -155,7 +155,8 @@ class RadioTest {
     @Test
     public void testOverLimitStation(){
         Radio rad = new Radio(20);
-        rad.setCurrentStation(21);
+        rad.setCurrentStation(22);
+
 
         int expected = 0;
         int actual = rad.getCurrentStation();
