@@ -2,9 +2,11 @@ package ru.netology;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @Data
+@NoArgsConstructor
 public class Radio {
     private int numberOfStation;
     private int currentStation;
@@ -12,22 +14,6 @@ public class Radio {
 
     public Radio(int numberOfStation) {
         this.numberOfStation = numberOfStation;
-    }
-
-    public Radio() {
-        this.numberOfStation = 10;
-    }
-
-    public int getCurrentStation() {
-        return this.currentStation;
-    }
-
-    public int getCurrentVolume() {
-        return this.currentVolume;
-    }
-
-    public void setCurrentVolume(int newCurrentVolume) {
-        this.currentVolume = newCurrentVolume;
     }
 
     public void setCurrentStation(int currentStation) {
